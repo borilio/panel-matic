@@ -7,7 +7,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full'},
   { path: "timer", component: CuentaAtrasComponent},
   { path: "timer/:time", component: CuentaAtrasComponent},
-  { path: "**", redirectTo: ""}
+  { path: "**", component: HomeComponent}
 ];
 
 @NgModule({
