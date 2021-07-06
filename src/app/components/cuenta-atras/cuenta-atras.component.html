@@ -1,7 +1,27 @@
 <!-- Tarjeta para la cuenta atrás -->
-<div class="card p-3 shadow">
-    <h1 class="card-title">Cuenta atrás</h1>
+<div class="card p-3 mt-5 shadow-lg">
+    
+    <h1 class="card-title">
+        <a class="btn btn-close rounded-circle float-end" routerLink="/"></a>
+        {{this.title}}
+    </h1>
     <div class="card-content">
-       <p class="text-center display-1">30:00.000</p>
+        <div class="alert alert-info text-center">
+            <strong>Inicio</strong> {{this.horaInicio | date:'HH:mm'}}
+            <hr>
+            <strong>Final</strong> {{this.horaFinal | date:'HH:mm'}}
+        </div>
+        
+        <div class="text-center display-1 timer-font alert" 
+            [class]="{
+                'alert-success': !this.tiempoTerminado, 
+                'alert-danger': this.tiempoTerminado
+            }"
+       >
+            <span>
+                <i class="bi bi bi-stopwatch float-left" [class]="{'hvr-buzz':this.tiempoTerminado}"></i>
+                {{this.restante | date:'mm:ss'}}
+            </span>           
+       </div>
     </div> 
 </div>

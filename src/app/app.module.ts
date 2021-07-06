@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CuentaAtrasComponent } from './components/cuenta-atras/cuenta-atras.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CuentaAtrasComponent
+    CuentaAtrasComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
