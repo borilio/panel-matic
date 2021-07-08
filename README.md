@@ -32,7 +32,7 @@ Añadirle el siguiente contenido al archivo `_redirects`.
 
 Y añadir lo siguiente al `angular.json`, en el atributo `assets`
 
-```typescript
+```json
 ...
 "assets": [
     "src/favicon.ico",
